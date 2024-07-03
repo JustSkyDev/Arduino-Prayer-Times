@@ -1,38 +1,45 @@
 #include "PrayTimes.h"
 
-PrayTimes JWS;
+PrayTimes JWS; // Create PrayTimes object
 
-// Lokasi Los Angeles, California, USA.
-double map_latitude = 34.0522;
-double map_longitude = 118.2437;
+// Set your location
+double map_latitude = 34.0522;  // Replace with your latitude
+double map_longitude = 118.2437; // Replace with your longitude
 
-int zona_waktu = -7;
+// Set timezone (optional, automatic detection if not set)
+int time_zone = -7; // Replace with your timezone offset
 
-int tahun = 2024;
-int bulan = 6;
-int tanggal = 13;
+// Adjust date (optional, defaults to current date)
+int years = 2024;    // Replace with the desired year
+int month = 6;       // Replace with the desired month
+int day = 13;     // Replace with the desired day
 
-void setup() {
+void setup() 
+{
+  // Start the Serial Communication
   Serial.begin(9600);
 
-  // Set koordinat
+  // Initialize PrayTimes with location
   JWS.SetCoordinate(map_latitude, map_longitude);
 
-  // Set zona waktunya
-  JWS.SetTimezone(zona_waktu);
+  // Set timezone if needed
+  JWS.SetTimezone(time_zone);
 
-  // Adjust tanggalnya
-  JWS.AdjustTime(tahun, bulan, tanggal);
+  // Adjust date if needed
+  JWS.AdjustTime(years, month, day);
 
+  // Get Fajr time (example)
+  int fajr_hours = JWS.getFajr().hours;
+  int fajr_minutes = JWS.getFajr().minutes;
 
-  int subuh_jam = JWS.getFajr().hours;
-  int subuh_menit = JWS.getFajr().minutes;
-
-  Serial.print("Subuh Jam: ");
-  Serial.print(subuh_jam);
+  // Print to Serial Monitor
+  Serial.print("Fajr: ");
+  Serial.print(fajr_hours);
   Serial.print(":");
-  Serial.print(subuh_menit);
+  Serial.print(fajr_minutes);
 }
 
-void loop() {
+void loop() 
+{
+  // Your main code
 }
