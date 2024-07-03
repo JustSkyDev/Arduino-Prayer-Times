@@ -1,0 +1,58 @@
+#######################################
+# PrayTimes Library Syntax Coloring
+#######################################
+
+# PrayTimes.h keywords
+PrayTimes	KEYWORD1
+HrsMin		TYPE
+
+# DMath.h keywords
+DMath		KEYWORD1
+
+# CalculateSun.h keywords
+CalculateSun	KEYWORD1
+
+# Common keywords
+class		KEYWORD2
+struct		KEYWORD2
+public		KEYWORD2
+private		KEYWORD2
+static		KEYWORD2
+
+# Function names
+dtr			KEYWORD3
+rtd			KEYWORD3
+sin			KEYWORD3
+cos			KEYWORD3
+tan			KEYWORD3
+arcsin		KEYWORD3
+arccos		KEYWORD3
+arctan		KEYWORD3
+arccot		KEYWORD3
+arctan2		KEYWORD3
+fix			KEYWORD3
+fixAngle	KEYWORD3
+fixHour		KEYWORD3
+timeDiff	KEYWORD3
+julianDate	KEYWORD3
+
+SetCoordinate	KEYWORD3
+AdjustTime	KEYWORD3
+AdjustDegree KEYWORD3
+getImsak	KEYWORD3
+getFajr		KEYWORD3
+getSunrise	KEYWORD3
+getDhuhr	KEYWORD3
+getAsr		KEYWORD3
+getSunset	KEYWORD3
+getMaghrib	KEYWORD3
+getIsha		KEYWORD3
+getMidnight	KEYWORD3
+
+DeclinationPos	KEYWORD3
+EquationPos		KEYWORD3
+MidDay			KEYWORD3
+AngleTime		KEYWORD3
+NightPortion	KEYWORD3
+DayPortion		KEYWORD3
+RiseSetAngle	KEYWORD3
